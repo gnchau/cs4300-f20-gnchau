@@ -1,45 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <script src="shaders.js"></script>
-    <script src="buffers.js"></script>
-    <script src="gl-matrix.js"></script>
-    <script src="render.js"></script>
-    <script src="textures.js"></script>
-    <title>Texture and Animation</title>
+<html>
+    <head>
+        <title>Computer Graphics</title>
+    </head>
+    <body>
+        <h1>Welcome to WebGL</h1>
+        <ul>
+          <li>
+            <a href="assignment1.html">A1 - Simple 2D Triangle</a>
+          </li>
+        </ul>
 
-    
-</head>
+        <ul>
+          <li>
+            <a href="assignment2.html">A2 - A WebGL Mini CAD</a>
+          </li>
+        </ul>
 
-<body onload="main()">
-    <canvas id="canvas" width="640" height="480"></canvas>
-    <script src="main.js"></script>
+        <ul>
+          <li>
+            <a href="assignment3.html">A3 - Interacting with WebGL</a>
+          </li>
+        </ul>
 
-    <script id="vertex-shader" type="x-shader/x-vertex">
-       attribute vec4 aVertexPosition;
-       attribute vec2 aTextureCoord;
+        <ul>
+          <li>
+            <a href="assignment4.html">A4 - WebGL Transformations</a>
+          </li>
+        </ul>
 
-       uniform mat4 uModelViewMatrix;
-       uniform mat4 uProjectionMatrix;
-       varying highp vec2 vTextureCoord;
+        <ul>
+          <li>
+            <a href="assignment5.html">A5 - WebGL 3D Projections</a>
+          </li>
+        </ul>
 
-       void main() {
-         gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition;
-         vTextureCoord = aTextureCoord;
-       }
+        <ul>
+          <li>
+            <a href="assignment6.html">A6 - Moving the Camera in WebGL</a>
+          </li>
+        </ul>
 
-    </script>
+        <ul>
+          <li>
+            <a href="assignment7.html">A7 - Lighting and Shading in WebGL</a>
+          </li>
+        </ul>
 
-    <script id="fragment-shader" type="x-shader/x-vertex">
-       varying highp vec2 vTextureCoord;
-       uniform sampler2D uSampler;
+        
+        <ul>
+          <li>
+            <a href="./assignment8/index.html">A8 - Texture and Animation</a>
+          </li>
+        </ul>
 
-       void main() {
-         gl_FragColor = texture2D(uSampler, vTextureCoord);
-       
-      }
-      
-    </script>
-</body>
+    </body>
 </html>
